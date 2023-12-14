@@ -1,0 +1,3 @@
+/home/pitchus/Desktop/bhonusik/build/CMakeFiles/twitch.dir
+/home/pitchus/Desktop/bhonusik/build/CMakeFiles/edit_cache.dir
+/home/pitchus/Desktop/bhonusik/build/CMakeFiles/rebuild_cache.dir

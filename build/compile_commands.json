@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/pitchus/Desktop/bhonusik/build",
+  "command": "/usr/bin/gcc    -fsanitize=address -g -o CMakeFiles/twitch.dir/ukol.c.o -c /home/pitchus/Desktop/bhonusik/ukol.c",
+  "file": "/home/pitchus/Desktop/bhonusik/ukol.c"
+},
+{
+  "directory": "/home/pitchus/Desktop/bhonusik/build",
+  "command": "/usr/bin/gcc    -fsanitize=address -g -o CMakeFiles/twitch.dir/sdl.c.o -c /home/pitchus/Desktop/bhonusik/sdl.c",
+  "file": "/home/pitchus/Desktop/bhonusik/sdl.c"
+},
+{
+  "directory": "/home/pitchus/Desktop/bhonusik/build",
+  "command": "/usr/bin/gcc    -fsanitize=address -g -o CMakeFiles/twitch.dir/dynamic_array.c.o -c /home/pitchus/Desktop/bhonusik/dynamic_array.c",
+  "file": "/home/pitchus/Desktop/bhonusik/dynamic_array.c"
+}
+]

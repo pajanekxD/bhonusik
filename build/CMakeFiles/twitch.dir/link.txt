@@ -1,0 +1,1 @@
+/usr/bin/gcc  -fsanitize=address -g CMakeFiles/twitch.dir/ukol.c.o CMakeFiles/twitch.dir/sdl.c.o CMakeFiles/twitch.dir/dynamic_array.c.o -o twitch  -lSDL2 -lSDL2_image -lSDL2_ttf -lm 
