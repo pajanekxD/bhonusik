@@ -83,7 +83,18 @@ int main()
         SDL_RenderClear(renderer);
 
         // Spawnování nových krtků
+        Uint32 spawn_time;
+        if (moles.size > 0)
+        {
+            Mole *last = moles.items[moles.size - 1];
+            spawn_time = last->spawn_time;
+        }
+        else
+        {
+            spawn_time = 0;
+        }
         Uint32 now = SDL_GetTicks();
+
         if (now - spawn_time >= spawn_interval)
         {
             // Vytvoření nového krtka
@@ -93,7 +104,6 @@ int main()
             m->rect.h = 50 + rand() % 100;
             m->rect.x = rand() % (800 - m->rect.w);
             m->rect.y = rand() % (600 - m->rect.h);
-            int index = (int)(rand() % ((int)(ew / 64) * (int)(eh / 64)));
             m->tex = emoji_tex;
             // Přidání krtka do pole
             dynarray_push(&moles, m);
@@ -105,8 +115,11 @@ int main()
             Mole *m = moles.items[i];
 
             // Výpočet pozice v textuře
-            int ex = (index % 18) * 64;
-            int ey = (index / 18) * 64;
+            int indexik = (int)(rand() % ((int)(ew / 64) * (int)(eh / 64)));
+
+            int ex = (indexik % 18) * 64;
+
+            int ey = (indexik / 18) * 64;
             SDL_Rect src_rect = {ex, ey, 64, 64};
 
             // Vykreslení krtka
@@ -117,6 +130,16 @@ int main()
             char text[32];
             snprintf(text, 32, "%d", lifetime / 1000);
             SDL_Color color = {255, 255, 0};
+
+            if (lifetime > 0)
+            {
+                color.r = 255 * lifetime / 1000;
+            }
+            else
+            {
+                color.r = 0;
+            }
+
             if (lifetime < 1000)
             {
                 color.r = 255 * lifetime / 1000;
