@@ -1,0 +1,1 @@
+/usr/bin/gcc  -fsanitize=address -g CMakeFiles/project.dir/ukol.c.o CMakeFiles/project.dir/sdl.c.o CMakeFiles/project.dir/dynamic_array.c.o -o project  -lSDL2 -lSDL2_image -lSDL2_ttf -lm 
